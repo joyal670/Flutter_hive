@@ -7,8 +7,8 @@ ValueNotifier<List<UserModel>> userModelListener = ValueNotifier([]);
 
 void addUser(UserModel model) async {
   final studentTable = await Hive.openBox<UserModel>('student_db');
-  final _id = await studentTable.add(model);
-  model.id = _id;
+  //final _id = await studentTable.add(model);
+  model.id = await studentTable.add(model);
   userModelListener.value.add(model);
   userModelListener.notifyListeners();
 }

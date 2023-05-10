@@ -68,19 +68,18 @@ class _DashboardScreenState extends State<DashBoardScreen> {
         context: context,
         builder: (context) {
           return Container(
-            width: double.infinity,
-            height: 500,
-            color: Colors.blue,
-            child: ListView(
-              children: [
-                Text("Title"),
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                    child: Text('Close'))
-              ],
-            ),
+            height: 300.0,
+            color: const Color(0xFF737373),
+            child: Container(
+                decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(40.0),
+                      topRight: Radius.circular(40.0),
+                    )),
+                child: const Center(
+                  child: Text("Hi modal sheet"),
+                )),
           );
         });
   }

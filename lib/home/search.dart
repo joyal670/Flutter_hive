@@ -29,11 +29,8 @@ class _SearchScreenState extends State<SearchScreen> {
                   },
                   trailing: IconButton(
                     onPressed: () {
-                      if (data.id != null) {
-                        deleteUser(data.id!);
-                      } else {
-                        _displaySuccessMotionToast("unable to delete");
-                      }
+                      print(index);
+                      deleteUser(index);
                     },
                     icon: Icon(Icons.delete),
                     color: Colors.red,
