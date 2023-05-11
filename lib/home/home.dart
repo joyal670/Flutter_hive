@@ -40,6 +40,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 alignment: Alignment.center,
                 child: Text("inkwell"),
               ),
+              onLongPress: () {
+                MotionToast(
+                        description: Text("asqwqw"),
+                        primaryColor: Colors.black12)
+                    .show(context);
+              },
               onTap: () {
                 MotionToast(
                         description: Text("sd"), primaryColor: Colors.black12)

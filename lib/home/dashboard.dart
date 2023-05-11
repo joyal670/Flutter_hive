@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sample/home/account.dart';
 import 'package:sample/home/search.dart';
+import 'package:sample/main.dart';
 import 'package:sample/splash/splash.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
@@ -46,7 +47,7 @@ class _DashboardScreenState extends State<DashBoardScreen> {
           items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
-            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search'),
+            BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Search')
           ],
         ),
       ),
@@ -59,7 +60,7 @@ class _DashboardScreenState extends State<DashBoardScreen> {
 
     Navigator.of(context).pushAndRemoveUntil(
         MaterialPageRoute(builder: (context) {
-      return SplashScreen();
+      return const SplashScreen();
     }), (route) => false);
   }
 
